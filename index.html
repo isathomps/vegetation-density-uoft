@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vegetation Density: UofT Schools</title>
+
+  <!-- Load ArcGIS embeddable map components -->
+  <script type="module" src="https://js.arcgis.com/4.34/embeddable-components/"></script>
+
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; margin:0; background:#f8f9fa; color:#333; }
+    header { background:#2E7D32; color:white; padding:16px 20px; text-align:center; font-size:20px; font-weight:600; }
+    main { display:flex; flex-direction:column; align-items:center; padding:20px; }
+    .map-container { width:90%; max-width:900px; background:white; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.1); padding:10px; }
+    .description { margin-top:15px; font-size:15px; text-align:center; color:#444; max-width:700px; }
+    footer { text-align:center; font-size:13px; color:#666; margin-top:30px; padding-bottom:20px; }
+    a { color:#2E7D32; }
+  </style>
+</head>
+
+<body>
+  <header>Vegetation Density: UofT Schools</header>
+
+  <main>
+    <div class="map-container">
+      <arcgis-embedded-map
+        style="height:600px;width:100%;"
+        item-id="943898cdeed840e287574ea026dfe5fd"
+        theme="light"
+        heading-enabled
+        legend-enabled
+        information-enabled
+        center="-79.40245666053724,43.666475885577725"
+        scale="1128.4971765"
+        portal-url="https://utoronto.maps.arcgis.com">
+      </arcgis-embedded-map>
+    </div>
+
+    <div class="description">
+      This interactive map visualizes vegetation density around the University of Toronto Schools (371 Bloor St W).
+      Data were collected using ArcGIS Field Maps and ranked 1–5 based on shrub coverage rather than open grass.
+      The map helps identify zones with higher vegetation density that contribute to improved stormwater absorption.
+    </div>
+
+    <footer>Map created by <strong>Isa Thompson</strong> — University of Toronto, November 2025.</footer>
+  </main>
+</body>
+</html>
